@@ -1,0 +1,39 @@
+{% load staticfiles %}
+{#加载django的静态文件模板，并在src和href中用{%  %}，或不用模板只用路径#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="{% static "js/jquery-3.3.1.js" %}"></script>
+    <link  type="text/css" rel="stylesheet" href="{% static "css/myStyle.css" %}"/>
+</head>
+<body>
+    <header>
+        <h1 style="background-color:lightgreen;color: blue">用户输入</h1>
+        <form action="" method="post">
+            <input type="text" name="userName" placeholder="请输入用户名">
+            <input type="password" name="passWord" placeholder="请输入密码">
+            <input type="submit" value="提交">
+        </form>
+    </header>
+    <article>
+        <table border="1">
+            <thead>
+                <th>用户名</th>
+                <th>密码</th>
+            </thead>
+            <tbody>
+{#django使用jinja2作为html页面替换的引擎，下面是用jinja2的for循环获取列表          #}
+            {% for line in data %}
+                <tr>
+                    <td>{{ line.user }}</td>
+                    <td>{{ line.pwd }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+Terminal命令：
+python manage.py startapp cmdb  创建一个名为cmdb的app
+python manage.py runserver 127.0.0.1:8000 运行web服务

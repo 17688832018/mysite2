@@ -1,0 +1,23 @@
+使用 django-admin.py 来创建 HelloWorld 项目： mysite
+
+python manage.py startapp cmdb  创建一个名为cmdb的app
+python manage.py runserver 127.0.0.1:8000 运行web服务
+
+django-admin.py startproject HelloWorld
+我们使用以下命令创建一个 TestModel 的 app: cmdb
+
+django-admin startapp TestModel
+$ python manage.py migrate   # 创建表结构
+
+$ python manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
+$ python manage.py migrate TestModel   # 创建表结构
+
+python manage.py createsuperuser 来创建超级用户，如下所示：
+
+# python manage.py createsuperuser
+Username (leave blank to use 'root'): admin
+Email address: admin@runoob.com
+Password:
+Password (again):
+Superuser created successfully.
+[root@solar HelloWorld]#
